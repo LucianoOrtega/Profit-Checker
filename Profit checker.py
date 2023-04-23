@@ -1,6 +1,3 @@
-#made by: Joaco853
-#github: https://github.com/Joaco853
-
 from bs4 import BeautifulSoup
 from colorama import Fore, init
 import requests
@@ -9,55 +6,50 @@ import time
 import base64
 from os import system
 
-
 init(convert=True)
 system("cls")
-#pide el appid y usa la libreria beatifulsoup y requests para leer la pagina
-print(Fore.GREEN + base64.b64decode( b'ICAvJCQkJCQkICAgICAgICAgICAgICAgICAgICAgICAvJCQkJCQkICAgICAgICAgICAgICAgICAgICAgIC8kJCQkJCQkIAogLyQkX18gICQkICAgICAgICAgICAgICAgICAgICAgLyQkX18gICQkICAgICAgICAgICAgICAgICAgICB8ICQkX18gICQkCnwgJCQgIFxfXy8gICAgICAgICAgICAgICAgICAgIHwgJCQgIFxfXy8gICAgICAgICAgICAgICAgICAgIHwgJCQgIFwgJCQKfCAgJCQkJCQkICAgICAgICAvJCQkJCQkICAgICAgfCAkJCAgICAgICAgICAgICAvJCQkJCQkICAgICAgfCAkJCQkJCQkLwogXF9fX18gICQkICAgICAgfF9fX19fXy8gICAgICB8ICQkICAgICAgICAgICAgfF9fX19fXy8gICAgICB8ICQkX19fXy8gCiAvJCQgIFwgJCQgICAgICAgICAgICAgICAgICAgIHwgJCQgICAgJCQgICAgICAgICAgICAgICAgICAgIHwgJCQgICAgICAKfCAgJCQkJCQkLyAgICAgICAgICAgICAgICAgICAgfCAgJCQkJCQkLyAgICAgICAgICAgICAgICAgICAgfCAkJCAgICAgIAogXF9fX19fXy8gICAgICAgICAgICAgICAgICAgICAgXF9fX19fXy8gICAgICAgICAgICAgICAgICAgICB8X18vICAgICAgCg==').decode())
+print(Fore.GREEN + base64.b64decode( b'CiAvJCQkJCQkJCAgICAgICAgICAgICAgICAgICAgICAvJCQkJCQkICAvJCQgICAvJCQgICAgICAgICAgICAgICAgICAgICAKfCAkJF9fICAkJCAgICAgICAgICAgICAgICAgICAgLyQkX18gICQkfF9fLyAgfCAkJCAgICAgICAgICAgICAgICAgICAgIAp8ICQkICBcICQkIC8kJCQkJCQgICAvJCQkJCQkIHwgJCQgIFxfXy8gLyQkIC8kJCQkJCQgICAgICAgICAgICAgICAgICAgCnwgJCQkJCQkJC8vJCRfXyAgJCQgLyQkX18gICQkfCAkJCQkICAgIHwgJCR8XyAgJCRfLyAgICAgICAgICAgICAgICAgICAKfCAkJF9fX18vfCAkJCAgXF9fL3wgJCQgIFwgJCR8ICQkXy8gICAgfCAkJCAgfCAkJCAgICAgICAgICAgICAgICAgICAgIAp8ICQkICAgICB8ICQkICAgICAgfCAkJCAgfCAkJHwgJCQgICAgICB8ICQkICB8ICQkIC8kJCAgICAgICAgICAgICAgICAgCnwgJCQgICAgIHwgJCQgICAgICB8ICAkJCQkJCQvfCAkJCAgICAgIHwgJCQgIHwgICQkJCQvICAgICAgICAgICAgICAgICAKfF9fLyAgICAgfF9fLyAgICAgICBcX19fX19fLyB8X18vICAgICAgfF9fLyAgIFxfX18vICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAvJCQkJCQkICAvJCQgICAgICAgICAgICAgICAgICAgICAgICAgICAvJCQgICAgICAgICAgICAgICAgICAgICAgICAgIAogLyQkX18gICQkfCAkJCAgICAgICAgICAgICAgICAgICAgICAgICAgfCAkJCAgICAgICAgICAgICAgICAgICAgICAgICAgCnwgJCQgIFxfXy98ICQkJCQkJCQgICAvJCQkJCQkICAgLyQkJCQkJCR8ICQkICAgLyQkICAvJCQkJCQkICAgLyQkJCQkJCAKfCAkJCAgICAgIHwgJCRfXyAgJCQgLyQkX18gICQkIC8kJF9fX19fL3wgJCQgIC8kJC8gLyQkX18gICQkIC8kJF9fICAkJAp8ICQkICAgICAgfCAkJCAgXCAkJHwgJCQkJCQkJCR8ICQkICAgICAgfCAkJCQkJCQvIHwgJCQkJCQkJCR8ICQkICBcX18vCnwgJCQgICAgJCR8ICQkICB8ICQkfCAkJF9fX19fL3wgJCQgICAgICB8ICQkXyAgJCQgfCAkJF9fX19fL3wgJCQgICAgICAKfCAgJCQkJCQkL3wgJCQgIHwgJCR8ICAkJCQkJCQkfCAgJCQkJCQkJHwgJCQgXCAgJCR8ICAkJCQkJCQkfCAkJCAgICAgIAogXF9fX19fXy8gfF9fLyAgfF9fLyBcX19fX19fXy8gXF9fX19fX18vfF9fLyAgXF9fLyBcX19fX19fXy98X18vICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA=').decode())
 while (True):
-    opcion = 1
-    if opcion ==1:
-      print(Fore.WHITE + "Ingrese las url de los juegos (separadas entre: , )")
-      urljuego = input()+","
-      urljuego2=urljuego.split(",")
-      Numerosdejuegos= len(urljuego2)
-      for j in range(1,Numerosdejuegos):
+      print(Fore.RESET +"Ingrese las URLs de los juegos separadas por comas o espacios, o escríbalas todas juntas sin separación alguna:")
+      urljuego = input().strip() + ","
 
-            urljuegodata= urljuego2[j-1].split("/")
+      def separar_enlaces(enlaces):
+            enlaces_separados = enlaces.split("https")
+            enlaces_juntos = ",".join(["https" + enlace for enlace in enlaces_separados if enlace])
+            return enlaces_juntos
+      enlaces_separados = separar_enlaces(urljuego)
+      url_juegos_separadas = enlaces_separados.split(",")
+      num_juegos = len(url_juegos_separadas )
+      
+      j = 1
+      repeticiones = 0
+      while j < num_juegos:
+            urljuegodata= url_juegos_separadas [j-1].split("/")
             appid= urljuegodata[4]
 
             store_doc = requests.get("https://store.steampowered.com/api/appdetails?appids="+appid+"&cc=ars&filters=price_overview")
             storesoup= BeautifulSoup(store_doc.content,"html.parser")
             strstoresoup= str(storesoup)
-            storejsonprecio= json.loads(strstoresoup)                                        #lee un objeto en json de un documento , y transforma el json en un string
-            strprecio= storejsonprecio[appid]["data"]["price_overview"]["final_formatted"]   #lee lo que pertenece a final_formatted en el json
 
-            print("El juego\033[1;37;40m "+urljuegodata[5]+ "\033[0;37;40m cuesta: \033[1;37;40m"+ Fore.GREEN + strprecio +"\033[0;37;40m")
-
+            storejsonprecio= json.loads(strstoresoup)                                        
+            strprecio= storejsonprecio[appid]["data"]["price_overview"]["final_formatted"]  
             precioreplace= strprecio.replace("ARS$","")
             precioreplace2= precioreplace.replace(",",".")
             preciodeljuego= float(precioreplace2)
 
             market_doc1 = requests.get("https://www.steamcardexchange.net/index.php?gamepage-appid-"+appid)
-
             marketsoup1 = BeautifulSoup(market_doc1.content, "html.parser")
-
             market_doc2 = requests.get("https://steamcommunity.com/market/search?q=&category_753_Game%5B%5D=tag_app_"+appid+"&category_753_cardborder%5B%5D=tag_cardborder_0&category_753_item_class%5B%5D=tag_item_class_2&appid=753")
-
             marketsoup2 = BeautifulSoup(market_doc2.content, "html.parser")
-
-            #lee el total de numeros de carta
 
             numerosdecartas = marketsoup2.find(id="searchResults_total")
             Ncartas=numerosdecartas.get_text()
             Cartas=int(Ncartas)
-            print("Cantidad de cromos: " + Ncartas)
 
             if Cartas%2==0 :
                   Dropcartas=Cartas/2
             if Cartas%2==1:
                   Dropcartas=(Cartas/2)+0.5
-
 
             urlprecio=""
             jsonget=""
@@ -89,7 +81,7 @@ while (True):
                   jsonget = requests.get(vectorurl[i])
                   soupprecio =BeautifulSoup(jsonget.content, 'html.parser')
                   soupstrprecio= str(soupprecio)
-                  jsonprecio= json.loads(soupstrprecio)                                   #lo convierte en json
+                  jsonprecio= json.loads(soupstrprecio)
                   try:
                         strprecio= jsonprecio["lowest_price"].replace("ARS$ ","")
                   except:
@@ -100,44 +92,40 @@ while (True):
                   str2precio= strprecio.replace(",",".")
                   precio= float(str2precio)
 
-                  if precio !=0 :
-                        if preciomasalto<precio:
-                              preciomasalto=precio
-
-                        if preciomasbajo>precio:
-                              preciomasbajo=precio
-
-                        sumadeprecios+= precio
-                  
-
-            # if erroresprecio==1 :
-            #       print("Hubo "+str(erroresprecio)+" error con el valor del cromo: "+ str(urlerror)+" ,y no sera contemplado en el promedio de los precios")
-            #       print("")
-
-            # if erroresprecio>1:
-            #       print("Hubieron "+str(erroresprecio)+" errores con el valor de los cromos: "+ str(urlerror)+" ,y no seran contemplados en el promedio de los precios")
-            #       print("")
-
-            # if erroresprecio==Cartas:
-            #       print("Hubo un error con todas las cartas, vuelva a intentarlo , puede ser que se hayan utilizado las 100000 request diarias a las API de steam , en ese caso vuelva a intentarlo mañana")
-            #       print("")
-
-            if float(preciomasbajo)*Dropcartas>preciodeljuego and (float(preciomasbajo)*Dropcartas-preciodeljuego) > 1.0:
-                 Diferencia=float(preciomasalto)-float(preciomasbajo)
-                 Diferencia= round(Diferencia,2)
-                 Diferencia2= (preciomasalto)/float(preciomasbajo)
-                 Diferencia2= round(Diferencia2,2)
-                 print("Mayor valor: "+ Fore.GREEN + "ARS$ " + str(preciomasalto)+Fore.RESET+ " // Menor valor: "+ Fore.RED + "ARS$ " + str(preciomasbajo)+Fore.RESET+" // Diferencia: "+ Fore.LIGHTCYAN_EX + "ARS$ " + str(Diferencia))
-                 print(Fore.RESET + "Vendiendo los cromos se obtiene como minimo: "+ Fore.GREEN + "ARS$ " + str(float(preciomasbajo)*Dropcartas))
-                 resultado = round(float(preciomasbajo)*Dropcartas-preciodeljuego, 2)
-                 print(Fore.GREEN + "PROFIT MINIMO: " + "ARS$ " + str(resultado))
-            else:
-                 print(Fore.RED + "PERDIDA O POCA GANANCIA")
-                 print(Fore.RESET + "Mayor valor: "+ Fore.GREEN + "ARS$ " + str(preciomasalto)+Fore.RESET+ " // Menor valor: "+ Fore.RED + "ARS$ " + str(preciomasbajo)+Fore.RESET)
-                 print(Fore.RESET + "Vendiendo los cromos se obtiene como minimo: "+ Fore.GREEN + "ARS$ " + str(float(preciomasbajo)*Dropcartas))
-                 resultado = round(float(preciomasbajo)*Dropcartas-preciodeljuego, 2)
-                 print(Fore.RED + "Ganancia minima: "+ "ARS$ " + str(resultado))
+                  if precio != 0:
+                   preciomasalto = max(precio, preciomasalto)
+                   preciomasbajo = min(precio, preciomasbajo)
+                   sumadeprecios += precio
             
-            print("\033[0;37;40m")
-            print("------------------------------------------------------------------------------------------------------------------------")
-            print("")
+            if str(preciomasbajo)=="99999":
+                  repeticiones += 1
+                  if repeticiones == 3:  
+                         print(Fore.RED + "No se pudo procesar el juego " + urljuegodata[5] + ". En consecuencia, se ignorará y se procederá con el siguiente.")
+                         print("\033[0;37;40m" + "-" * 120)
+                         j += 1
+                         repeticiones = 0
+                  continue       
+
+            print(Fore.RESET + "El juego\033[1;37;40m "+urljuegodata[5]+ "\033[0;37;40m cuesta: \033[1;37;40m"+ Fore.GREEN + "ARS$ " + str(preciodeljuego)) 
+            print(Fore.RESET + "Cantidad de cromos: " + Ncartas)
+
+            if float(preciomasbajo) * Dropcartas > preciodeljuego and (float(preciomasbajo) * Dropcartas - preciodeljuego) > 1.0:
+                  Diferencia = round(float(preciomasalto) - float(preciomasbajo), 2)
+                  Diferencia2 = round(float(preciomasalto) / float(preciomasbajo), 2)
+                  min_sell_price = round(float(preciomasbajo) * Dropcartas, 2)
+                  min_profit = round(min_sell_price - preciodeljuego, 2)
+                  print(f"Mayor valor: {Fore.GREEN}ARS$ {preciomasalto}{Fore.RESET} // Menor valor: {Fore.RED}ARS$ {preciomasbajo}{Fore.RESET} // Diferencia: {Fore.LIGHTCYAN_EX}ARS$ {Diferencia}")
+                  print(f"{Fore.RESET}Vendiendo los cromos se obtiene como mínimo: {Fore.GREEN}ARS$ {min_sell_price}")
+                  print(f"{Fore.LIGHTGREEN_EX}PROFIT MÍNIMO: ARS$ {min_profit}")
+            else:
+                  max_sell_price = round(float(preciomasbajo) * Dropcartas, 2)
+                  min_sell_price = round(float(preciomasbajo) * Dropcartas, 2)
+                  min_profit = round(min_sell_price - preciodeljuego, 2)
+                  print(f"{Fore.RED}PERDIDA O POCA GANANCIA")
+                  print(f"{Fore.RESET}Mayor valor: {Fore.GREEN}ARS$ {preciomasalto}{Fore.RESET} // Menor valor: {Fore.RED}ARS$ {preciomasbajo}{Fore.RESET}")
+                  print(f"{Fore.RESET}Vendiendo los cromos se obtiene como mínimo: {Fore.GREEN}ARS$ {max_sell_price}")
+                  print(f"{Fore.RED}Ganancia mínima: ARS$ {min_profit}")
+
+            print("\033[0;37;40m" + "-" * 120)
+            repeticiones = 0
+            j += 1
